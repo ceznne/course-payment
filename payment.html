@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete Your Payment</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 500px; 
+            margin: 50px auto; 
+            padding: 20px;
+            background-color: #f9f9f9; 
+        }
+        h2 { color: #E2136E; } /* bKash color */
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input { 
+            width: 95%; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+        }
+        button { 
+            background: #E2136E; 
+            color: white; 
+            padding: 12px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover { background: #b50e5a; }
+        #status { 
+            margin-top: 15px; 
+            padding: 10px; 
+            border-radius: 5px; 
+            display: none; 
+            text-align: center;
+        }
+        .instructions {
+            background-color: #fff4e5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid orange;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Complete Your Course Payment</h2>
+    
+    <div class="instructions">
+        <p><strong>Payment Instructions:</strong></p>
+        <ol>
+            <li>Send <b>2196 Taka</b> to bKash Personal: <b>01XXXXXXXXX</b></li>
+            <li>Fill in your details and the Transaction ID from bKash below.</li>
+            <li>Click submit. We will verify your payment and add you to the WhatsApp group.</li>
+        </ol>
+    </div>
+    
+    <form id="paymentForm">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Your Phone Number (for WhatsApp):</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="transactionId">bKash Transaction ID:</label>
+            <input type="text" id="transactionId" name="transactionId" required>
+        </div>
+        <button type="submit">Submit Verification</button>
+    </form>
+    
+    <div id="status"></div>
+
+</body>
+</html>
